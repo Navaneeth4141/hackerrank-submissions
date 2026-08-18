@@ -24,7 +24,7 @@ The **CITY** table is described as follows:
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-18T14:02:01.864Z  
+**Submitted:** 2026-08-18T14:02:49.375Z  
 
 ```sql
 select * from city;
