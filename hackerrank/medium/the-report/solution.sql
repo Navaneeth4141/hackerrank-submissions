@@ -1,0 +1,1 @@
+select (case when g.Grade >= 8 then s.Name else NULL end) as names, g.grade, s.marks from students as s join grades as g where s.marks between g.min_mark and g.max_mark order by grade desc, name, marks;
