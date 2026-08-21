@@ -1,0 +1,1 @@
+select h.hacker_id, h.name, sum(m_score) from hackers as h join (select s.hacker_id, max(score) as m_score from submissions as s group by s.hacker_id, s.challenge_id) as st on h.hacker_id = st.hacker_id group by h.hacker_id, h.name having sum(m_score) > 0 order by sum(m_score) desc, h.hacker_id asc;
