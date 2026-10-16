@@ -10,11 +10,11 @@
 --    end, ')')
 -- from Occupations order by name;
 
-SELECT CONCAT(Name, '(', left(Occupation, 1), ')')
-FROM OCCUPATIONS
-ORDER BY Name ASC;
+select concat(name, '(', left(Occupation, 1), ')')
+from Occupations
+order by name asc;
 
-SELECT CONCAT('There are a total of ', COUNT(Occupation), ' ', LOWER(Occupation), 's.')
-FROM OCCUPATIONS
-GROUP BY Occupation
-ORDER BY COUNT(Occupation) ASC, LOWER(Occupation) ASC;
+select concat ('There are a total of ', count(Occupation), ' ', lower(Occupation), 's.')
+from Occupations
+group by Occupation
+order by count(Occupation) asc, lower(Occupation) asc;
