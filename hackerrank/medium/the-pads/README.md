@@ -32,7 +32,7 @@ The **OCCUPATIONS** table is described as follows:
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-16T04:55:41.883Z  
+**Submitted:** 2026-10-16T04:58:33.324Z  
 
 ```sql
 -- select concat(name, '(', substr(occupation, 1, 1), ')' ) from Occupations order by name asc;
@@ -47,14 +47,14 @@ The **OCCUPATIONS** table is described as follows:
 --    end, ')')
 -- from Occupations order by name;
 
-SELECT CONCAT(Name, '(', left(Occupation, 1), ')')
-FROM OCCUPATIONS
-ORDER BY Name ASC;
+select concat(name, '(', left(Occupation, 1), ')')
+from Occupations
+order by name asc;
 
-SELECT CONCAT('There are a total of ', COUNT(Occupation), ' ', LOWER(Occupation), 's.')
-FROM OCCUPATIONS
-GROUP BY Occupation
-ORDER BY COUNT(Occupation) ASC, LOWER(Occupation) ASC;
+select concat ('There are a total of ', count(Occupation), ' ', lower(Occupation), 's.')
+from Occupations
+group by Occupation
+order by count(Occupation) asc, lower(Occupation) asc;
 
 ```
 
